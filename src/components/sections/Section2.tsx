@@ -25,7 +25,7 @@ function Section2() {
         <div className="grid grid-cols-8 gap-4 items-center ">
           <div className="col-span-4 flex-row" data-aos="fade-left">
             <h1 className={` ${carterOne.className} text-[24px] sm:text-[30px]`}>
-              Webspirre has everything you <br /> need to ignite your{" "}
+              Webspirre has everything you <br /> need to ignite youre{" "}
               <span
                 style={{
                   backgroundImage: `url(${backgroundImageUrl})`,
