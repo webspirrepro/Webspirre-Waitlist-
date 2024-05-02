@@ -183,7 +183,11 @@ const ContactForm: React.FC<ModalType> = ({
                     <ErrorMessage
                       name="name"
                       component="div"
-                      className={cx(carterOne.className, "error text-red-900")}
+                      className={cx(
+                        carterOne.className,
+                        "error text-red-900",
+                        !errors.name && "visible block"
+                      )}
                     />
                     {/* {screenSize} */}
                   </div>
@@ -417,6 +421,12 @@ const ContactForm: React.FC<ModalType> = ({
                 </button>
               </div>
             </Form>
+            <img
+              data-aos="fade-up-down"
+              src="https://res.cloudinary.com/dwqantex4/image/upload/v1714673238/Group_43_jiwbvu.svg"
+              alt=""
+              className="hidden sm:flex absolute bottom-0 z-0 opacity-20"
+            />
           </>
         )}
       </Formik>

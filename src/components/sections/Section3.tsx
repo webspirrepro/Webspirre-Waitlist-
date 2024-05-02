@@ -10,7 +10,7 @@ const carterOne = Carter_One({
   display: "swap",
 });
 
-function Section3() {
+const Section3 = () => {
   React.useEffect(() => {
     AOS.init({
       duration: 1500,
@@ -30,7 +30,9 @@ function Section3() {
             className="col-span-5  sm:pr-[200px] relative z-10"
             data-aos="fade-up-left"
           >
-            <h1 className={`${carterOne.className} px-4 text-[20px sm:text-[30px] text-white`}>
+            <h1
+              className={`${carterOne.className} px-4 text-[20px sm:text-[30px] text-white`}
+            >
               A vast collection of some of the <br /> internet’s best{" "}
               <span
                 style={{
@@ -82,6 +84,6 @@ function Section3() {
       </section>
     </div>
   );
-}
+};
 
 export default Section3;

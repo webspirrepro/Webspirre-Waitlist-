@@ -24,8 +24,8 @@ function Section4() {
 
   return (
     <div className="">
-      <section className="relative h-[940px] sm:h-[598px]">
-        <div className=" sm:relative w-full h-[940px] sm:h-[598px] items-center bg-[#E4A12D] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 sm:gap-4 sm:pr-[200px]">
+      <section className="relative h-[900px] sm:h-[598px]">
+        <div className=" sm:relative w-full h-[900px] sm:h-[598px] items-center bg-[#E4A12D] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 sm:gap-4 sm:pr-[200px]">
           <div
             style={{
               backgroundImage: `url(${backgroundImageUrl})`,
@@ -33,13 +33,14 @@ function Section4() {
               backgroundPosition: "center",
               position: "relative", // Position relative to allow absolute positioning of child elements
             }}
-            className="col-span-3  order-last sm:order-first w-full h-[511px] "
+            className="col-span-3 order-last sm:order-first w-full h-[511px] "
           ></div>
           <div
             className="col-span-5 order-first sm:order-last md:col-span-5 md:pl-[200px] relative z-10"
             data-aos="fade-up-left"
           >
-            <div className="md:w-[568px]">
+            {/* <div className="md:w-[568px]"> */}
+            <div className="w-full">
               <h1
                 className={`${carterOne.className} px-4 text-xl md:text-[32px] text-[#242B36]`}
               >
@@ -57,7 +58,7 @@ function Section4() {
                   looking for
                 </span>
               </h1>
-              <p className="text-xs px-4 md:text-[20px] text-[#242B36] my-[32px] ">
+              <p className="text-sm xl:text-lg px-4 text-[#242B36] my-[32px] ">
                 Search by industry, design style, page type, functionality, and
                 more. Discover hidden gems you might have missed otherwise.
               </p>{" "}

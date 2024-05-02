@@ -23,7 +23,7 @@ function Section5() {
     "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714387576/utilities/Vector_12_l9kvsk.svg";
 
   return (
-    <div className="container ">
+    <div className=" ">
       <section className="relative h-[900px] sm:h-[598px]">
         <div className="sm:relative h-[900px] sm:h-[598px] items-center bg-black grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 sm:gap-4 sm:pl-[200px]">
           <div
@@ -59,13 +59,13 @@ function Section5() {
               Join the waitlist
             </Link>
             <img
-              data-aos="fade-up-down"
               src="https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714663022/utilities/Group_38_3_cglhqj.svg"
               alt=""
               className="sm:hidden flex mt-10 z-0"
             />
           </div>
           <div
+            data-aos="fade-up-down"
             style={{
               backgroundImage: `url(${backgroundImageUrl})`,
               backgroundSize: "cover",

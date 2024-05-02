@@ -71,7 +71,7 @@ export default function Home() {
             open={isForm}
             videoToggle={handleVideoToggle}
           />
-          <Footer />
+          <Footer toogleModal={() => {}} videoToggle={handleVideoToggle} />
         </main>
       </ErrorBoundary>
       <ScrollToTop smooth className="flex justify-center items-center " />

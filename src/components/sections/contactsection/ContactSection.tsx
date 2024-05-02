@@ -50,7 +50,7 @@ const ContactSection: React.FC<ModalType> = ({
               >
                 Don't
               </span>{" "}
-              miss out
+              miss out!
             </h1>
             <p
               className={cx(
@@ -62,7 +62,7 @@ const ContactSection: React.FC<ModalType> = ({
               Webspirre and unlock a universe of web design inspiration.
             </p>
           </div>
-          <div className="mt-4 md:mt-10 mx-0 md:mx-auto w-full">
+          <div className="mt-4 md:mt-10 mx-0 md:mx-auto w-full relative">
             <ContactForm
               toogleModal={toogleModal}
               open={open}
