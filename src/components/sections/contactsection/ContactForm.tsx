@@ -64,6 +64,41 @@ const ContactForm: React.FC<ModalType> = ({
     specialization: "",
   };
 
+  const [screenSize, setScreenSize] = React.useState("");
+
+  React.useEffect(() => {
+    // Function to update screen size
+    const updateScreenSize = () => {
+      const width = window.innerWidth;
+      let size = "";
+
+      if (width < 576) {
+        size = "Extra Small (XS)";
+      } else if (width >= 576 && width < 768) {
+        size = "Small (SM)";
+      } else if (width >= 768 && width < 992) {
+        size = "Medium (MD)";
+      } else if (width >= 992 && width < 1200) {
+        size = "Large (LG)";
+      } else {
+        size = "Extra Large (XL)";
+      }
+
+      setScreenSize(size);
+    };
+
+    // Event listener to update screen size on resize
+    window.addEventListener("resize", updateScreenSize);
+
+    // Initial call to set screen size
+    updateScreenSize();
+
+    // Clean up event listener on unmount
+    return () => {
+      window.removeEventListener("resize", updateScreenSize);
+    };
+  }, []);
+
   const handleSubmit = async (
     values: FormData,
     { resetForm }: FormikHelpers<FormData>
@@ -141,7 +176,7 @@ const ContactForm: React.FC<ModalType> = ({
                       placeholder="Enter your firstName"
                       className={cx(
                         carterOne.className,
-                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500 placeholder:text-xs md:text-xl"
+                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500 placeholder:text-xs md:placeholder:text-xl"
                       )}
                     />
 
@@ -150,6 +185,7 @@ const ContactForm: React.FC<ModalType> = ({
                       component="div"
                       className={cx(carterOne.className, "error text-red-900")}
                     />
+                    {/* {screenSize} */}
                   </div>
 
                   <div className={cx(carterOne.className, "flex flex-col")}>
@@ -161,7 +197,7 @@ const ContactForm: React.FC<ModalType> = ({
                       name="email"
                       className={cx(
                         carterOne.className,
-                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs"
+                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs md:placeholder:text-xl"
                       )}
                     />
                     <ErrorMessage
@@ -195,13 +231,17 @@ const ContactForm: React.FC<ModalType> = ({
                             (option) => option.value === field.value
                           )} // Set the value prop to the selected option
                           placeholder="Select Industry..."
-                          className="h-10 md:h-16"
+                          // className="h-10 md:h-16"
                           styles={{
                             control: (provided) => ({
                               ...provided,
                               border: "1px solid #ccc",
                               borderRadius: "4px",
-                              // height: "60px",
+                              height:
+                                screenSize === "Small (SM)" ||
+                                screenSize === "Medium (MD)"
+                                  ? "40px"
+                                  : "60px",
                               width: "100%", // Customize width as needed
                             }),
                             option: (provided, state) => ({
@@ -232,7 +272,7 @@ const ContactForm: React.FC<ModalType> = ({
                       placeholder="Enter your lastName"
                       className={cx(
                         carterOne.className,
-                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs placeholder:font-thin"
+                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs md:placeholder:text-xl placeholder:font-thin"
                       )}
                     />
                     <ErrorMessage
@@ -274,7 +314,11 @@ const ContactForm: React.FC<ModalType> = ({
                               ...provided,
                               border: "1px solid #ccc",
                               borderRadius: "4px",
-                              // height: "60px",
+                              height:
+                                screenSize === "Small (SM)" ||
+                                screenSize === "Medium (MD)"
+                                  ? "40px"
+                                  : "60px",
                               width: "100%", // Customize width as needed
                             }),
                             option: (provided, state) => ({
@@ -322,13 +366,17 @@ const ContactForm: React.FC<ModalType> = ({
                             (option) => option.value === field.value
                           )} // Set the value prop to the selected option
                           placeholder="Select Specialization..."
-                          className="h-10 md:h-16"
+                          // className="h-10 md:h-16 border-2 border-gray-300 rounded-md w-full"
                           styles={{
                             control: (provided) => ({
                               ...provided,
                               border: "1px solid #ccc",
                               borderRadius: "4px",
-                              // height: "60px",
+                              height:
+                                screenSize === "Small (SM)" ||
+                                screenSize === "Medium (MD)"
+                                  ? "40px"
+                                  : "60px",
                               width: "100%", // Customize width as needed
                             }),
                             option: (provided, state) => ({

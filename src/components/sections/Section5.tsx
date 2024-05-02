@@ -23,20 +23,21 @@ function Section5() {
     "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714387576/utilities/Vector_12_l9kvsk.svg";
 
   return (
-    <div className="">
-      <section className="relative h-[598px]">
-        <div className="relative h-full items-center bg-black grid grid-cols-8 gap-4 pl-[200px]">
+    <div className="container ">
+      <section className="relative md:h-[598px]">
+        <div className="relative h-full items-center bg-black grid md:grid-cols-8 gap-4 md:pl-[200px] px-4 md:px-0">
           <div
-            className="col-span-5 pr-[200px] relative z-10"
+            className="col-span-8 md:col-span-5 md:pr-[200px] relative z-10"
             data-aos="fade-up-right"
           >
-            <h1 className={`${carterOne.className} text-[32px] text-white`}>
+            <h1
+              className={`${carterOne.className} text-xl md:text-[32px] text-white`}
+            >
               Stay ahead of the
               <span
                 style={{
                   backgroundImage: `url(${backgroundImageUrl1})`,
                   backgroundSize: "contain",
-                  //   backgroundPosition: "center",
                   position: "relative",
                   backgroundRepeat: "no-repeat",
                 }}
@@ -49,13 +50,13 @@ function Section5() {
               Get exclusive access to design trends and upcoming innovations in
               the web design world. Webspirre will be your one-stop shop for
               staying inspired and informed.
-            </p>{" "}
+            </p>
             <br />
             <Link
               href="/"
-              className=" bg-black p-4 px-8 text-[#E4A12D] rounded-[20px] border border-[#E4A12D] font-medium text-[18px]"
+              className="bg-black py-2 md:p-4 px-6 md:px-8 text-[#E4A12D] rounded-[20px] border border-[#E4A12D] font-medium text-xs md:text-[18px]"
             >
-              Join the waitlist{" "}
+              Join the waitlist
             </Link>
           </div>
           <div
@@ -63,9 +64,9 @@ function Section5() {
               backgroundImage: `url(${backgroundImageUrl})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
-              position: "relative", // Position relative to allow absolute positioning of child elements
+              position: "relative",
             }}
-            className="col-span-3 w-full h-full "
+            className="col-span-3 w-full h-full"
           ></div>
         </div>
         <img
@@ -73,7 +74,7 @@ function Section5() {
           src="https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714214062/utilities/Frame_38_1_wzk5f9.svg"
           alt=""
           className="absolute bottom-0 z-0"
-        />{" "}
+        />
       </section>
     </div>
   );

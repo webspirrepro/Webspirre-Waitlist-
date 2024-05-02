@@ -23,9 +23,9 @@ function Section4() {
   });
 
   return (
-    <div className="">
+    <div className="container">
       <section className="relative h-[598px]">
-        <div className="relative h-full items-center bg-[#E4A12D] grid grid-cols-8 gap-4 ">
+        <div className="relative h-full items-center bg-[#E4A12D] grid md:grid-cols-8 gap-4 ">
           <div
             style={{
               backgroundImage: `url(${backgroundImageUrl})`,
@@ -36,12 +36,12 @@ function Section4() {
             className="col-span-3 w-full h-full "
           ></div>
           <div
-            className="col-span-5 pl-[200px] relative z-10"
+            className="col-span-5 md:col-span-5 md:pl-[200px] relative z-10"
             data-aos="fade-up-left"
           >
-            <div className="w-[568px]">
+            <div className="md:w-[568px]">
               <h1
-                className={`${carterOne.className} text-[32px] text-[#242B36]`}
+                className={`${carterOne.className} text-xl md:text-[32px] text-[#242B36]`}
               >
                 Powerful filtering tools to pinpoint <br /> exactly what you're{" "}
                 <span
@@ -57,7 +57,7 @@ function Section4() {
                   looking for
                 </span>
               </h1>
-              <p className="text-[20px] text-[#242B36] my-[32px] ">
+              <p className="text-xs md:text-[20px] text-[#242B36] my-[32px] ">
                 Search by industry, design style, page type, functionality, and
                 more. Discover hidden gems you might have missed otherwise.
               </p>{" "}
