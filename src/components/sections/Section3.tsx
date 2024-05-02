@@ -24,13 +24,13 @@ function Section3() {
 
   return (
     <div className="">
-      <section className="relative h-[598px]">
-        <div className="relative h-full items-center bg-black grid grid-cols-8 gap-4 pl-[200px]">
+      <section className="relative h-[900px] sm:h-[598px]">
+        <div className="sm:relative h-[900px] sm:h-[598px] items-center bg-black grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 sm:gap-4 sm:pl-[200px]">
           <div
-            className="col-span-5 pr-[200px] relative z-10"
+            className="col-span-5  sm:pr-[200px] relative z-10"
             data-aos="fade-up-left"
           >
-            <h1 className={`${carterOne.className}  text-[30px] text-white`}>
+            <h1 className={`${carterOne.className} px-4 text-[20px sm:text-[30px] text-white`}>
               A vast collection of some of the <br /> internet’s best{" "}
               <span
                 style={{
@@ -45,7 +45,7 @@ function Section3() {
                 designed websites.
               </span>
             </h1>
-            <p className="text-sm xl:text-lg text-white my-[32px] ">
+            <p className="text-sm xl:text-lg  px-4 text-white my-[32px] ">
               Tired of endlessly trawling through different websites searching
               for that perfect spark of inspiration for the project at hand? We
               get it. That's why we're building Webspirre.
@@ -53,10 +53,15 @@ function Section3() {
             <br />
             <Link
               href="/"
-              className=" bg-black p-4 px-8 text-[#E4A12D] rounded-[20px] border border-[#E4A12D] font-medium text-[18px]"
+              className=" bg-black p-4 mx-4 px-8 text-[#E4A12D] rounded-[20px] border border-[#E4A12D] font-medium text-[18px]"
             >
               Join the waitlist{" "}
             </Link>
+            <img
+              src="https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714659859/utilities/Group_38_spm24r.svg"
+              alt=""
+              className="mt-20 sm:hidden"
+            />{" "}
           </div>
           <div
             data-aos="fade-up-right"
@@ -66,13 +71,13 @@ function Section3() {
               backgroundPosition: "center",
               position: "relative", // Position relative to allow absolute positioning of child elements
             }}
-            className="col-span-3 w-full h-full "
+            className="col-span-3 w-full h-[511px] sm:h-full "
           ></div>
         </div>
         <img
           src="https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714214062/utilities/Frame_38_1_wzk5f9.svg"
           alt=""
-          className="absolute bottom-0 z-0"
+          className="absolute hidden sm:block bottom-0 z-0"
         />{" "}
       </section>
     </div>

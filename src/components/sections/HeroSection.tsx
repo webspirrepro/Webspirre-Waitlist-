@@ -43,7 +43,7 @@ const HeroSection: React.FC<HeroSectionType> = ({ bgImg, videoToggle }) => {
               data-aos="zoom-in-up"
             >
               <h1
-                className={`${carterOne.className} text-[32px] sm:text-5xl text-center font-black leading-tight`}
+                className={`${carterOne.className} text-[32px] sm:text-5xl text-center font-black `}
               >
                 Finding web design inspiration doesn’t have  to be{" "}
                 <span

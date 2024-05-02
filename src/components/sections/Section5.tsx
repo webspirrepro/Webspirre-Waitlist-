@@ -24,14 +24,14 @@ function Section5() {
 
   return (
     <div className="container ">
-      <section className="relative md:h-[598px]">
-        <div className="relative h-full items-center bg-black grid md:grid-cols-8 gap-4 md:pl-[200px] px-4 md:px-0">
+      <section className="relative h-[900px] sm:h-[598px]">
+        <div className="sm:relative h-[900px] sm:h-[598px] items-center bg-black grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 sm:gap-4 sm:pl-[200px]">
           <div
             className="col-span-8 md:col-span-5 md:pr-[200px] relative z-10"
             data-aos="fade-up-right"
           >
             <h1
-              className={`${carterOne.className} text-xl md:text-[32px] text-white`}
+              className={`${carterOne.className} px-4 text-xl md:text-[32px] text-white`}
             >
               Stay ahead of the
               <span
@@ -46,7 +46,7 @@ function Section5() {
                 curve
               </span>
             </h1>
-            <p className="text-[20px] text-white my-[32px] ">
+            <p className="text-[20px] text-white px-4 my-[32px] ">
               Get exclusive access to design trends and upcoming innovations in
               the web design world. Webspirre will be your one-stop shop for
               staying inspired and informed.
@@ -54,10 +54,16 @@ function Section5() {
             <br />
             <Link
               href="/"
-              className="bg-black py-2 md:p-4 px-6 md:px-8 text-[#E4A12D] rounded-[20px] border border-[#E4A12D] font-medium text-xs md:text-[18px]"
+              className="bg-black mx-4 py-2 md:p-4 px-6 md:px-8 text-[#E4A12D] rounded-[20px] border border-[#E4A12D] font-medium text-xs md:text-[18px]"
             >
               Join the waitlist
             </Link>
+            <img
+              data-aos="fade-up-down"
+              src="https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714663022/utilities/Group_38_3_cglhqj.svg"
+              alt=""
+              className="sm:hidden flex mt-10 z-0"
+            />
           </div>
           <div
             style={{
@@ -66,14 +72,14 @@ function Section5() {
               backgroundPosition: "center",
               position: "relative",
             }}
-            className="col-span-3 w-full h-full"
+            className="col-span-3 w-full h-[511px]"
           ></div>
         </div>
         <img
           data-aos="fade-up-down"
           src="https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714214062/utilities/Frame_38_1_wzk5f9.svg"
           alt=""
-          className="absolute bottom-0 z-0"
+          className="hidden sm:flex absolute bottom-0 z-0"
         />
       </section>
     </div>

@@ -23,9 +23,9 @@ function Section4() {
   });
 
   return (
-    <div className="container">
-      <section className="relative h-[598px]">
-        <div className="relative h-full items-center bg-[#E4A12D] grid md:grid-cols-8 gap-4 ">
+    <div className="">
+      <section className="relative h-[940px] sm:h-[598px]">
+        <div className=" sm:relative w-full h-[940px] sm:h-[598px] items-center bg-[#E4A12D] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 sm:gap-4 sm:pr-[200px]">
           <div
             style={{
               backgroundImage: `url(${backgroundImageUrl})`,
@@ -33,15 +33,15 @@ function Section4() {
               backgroundPosition: "center",
               position: "relative", // Position relative to allow absolute positioning of child elements
             }}
-            className="col-span-3 w-full h-full "
+            className="col-span-3  order-last sm:order-first w-full h-[511px] "
           ></div>
           <div
-            className="col-span-5 md:col-span-5 md:pl-[200px] relative z-10"
+            className="col-span-5 order-first sm:order-last md:col-span-5 md:pl-[200px] relative z-10"
             data-aos="fade-up-left"
           >
             <div className="md:w-[568px]">
               <h1
-                className={`${carterOne.className} text-xl md:text-[32px] text-[#242B36]`}
+                className={`${carterOne.className} px-4 text-xl md:text-[32px] text-[#242B36]`}
               >
                 Powerful filtering tools to pinpoint <br /> exactly what you're{" "}
                 <span
@@ -57,24 +57,30 @@ function Section4() {
                   looking for
                 </span>
               </h1>
-              <p className="text-xs md:text-[20px] text-[#242B36] my-[32px] ">
+              <p className="text-xs px-4 md:text-[20px] text-[#242B36] my-[32px] ">
                 Search by industry, design style, page type, functionality, and
                 more. Discover hidden gems you might have missed otherwise.
               </p>{" "}
               <br />
               <Link
                 href="/"
-                className=" bg-[#E4A12D] p-4 px-8 text-[#242B36] rounded-[20px] border border-[#242B36] font-medium text-[18px]"
+                className=" mx-4 bg-[#E4A12D] p-4 px-8 text-[#242B36] rounded-[20px] border border-[#242B36] font-medium text-[18px]"
               >
                 Join the waitlist{" "}
               </Link>
+              <img
+                src="https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714661777/utilities/Group_38_1_whyjb0.svg"
+                alt=""
+                className="sm:hidden mt-10 z-0"
+                data-aos="fade-up-right"
+              />{" "}
             </div>
           </div>
         </div>
         <img
           src="https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714387127/utilities/Group_39_rfdyyy.svg"
           alt=""
-          className="absolute bottom-0 right-0 z-0"
+          className="absolute hidden sm:flex bottom-0 right-0 z-0"
           data-aos="fade-up-right"
         />{" "}
       </section>
