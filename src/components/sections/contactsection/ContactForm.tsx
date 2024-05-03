@@ -183,7 +183,7 @@ const ContactForm: React.FC<ModalType> = ({
                       type="text"
                       id="name"
                       name="name"
-                      placeholder="Enter your firstName"
+                      placeholder=""
                       className={cx(
                         carterOne.className,
                         "block w-full py-4 md:py-6 px-4 rounded-xl  border border-gray-300 focus:outline-none focus:border-blue-500 placeholder:text-xs md:placeholder:text-xl placeholder:font-light"
@@ -201,7 +201,34 @@ const ContactForm: React.FC<ModalType> = ({
                     />
                     {/* {screenSize} */}
                   </div>
-
+                  {/*Last Name */}
+                   <div
+                    className={cx(
+                      carterOne.className,
+                      " flex-col space-y-3 flex md:hidden"
+                    )}
+                  >
+                    <label htmlFor="lastName">Last name</label>
+                    <Field
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      placeholder=""
+                      className={cx(
+                        carterOne.className,
+                        "block w-full py-4 md:py-6 px-8 rounded-xl  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs md:placeholder:text-xl placeholder:font-light"
+                      )}
+                    />
+                    <ErrorMessage
+                      name="lastName"
+                      component="div"
+                      className={cx(
+                        carterOne.className,
+                        "invisible error text-red-900 "
+                      )}
+                    />
+                  </div>
+                  
                   <div
                     className={cx(
                       carterOne.className,
@@ -223,33 +250,6 @@ const ContactForm: React.FC<ModalType> = ({
                       name="email"
                       component="div"
                       className={cx(carterOne.className, "error text-red-900")}
-                    />
-                  </div>
-{/*                   Last Name */}
-                   <div
-                    className={cx(
-                      carterOne.className,
-                      " flex-col space-y-3 flex md:hidden"
-                    )}
-                  >
-                    <label htmlFor="lastName">Last name</label>
-                    <Field
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      placeholder="Enter your lastName"
-                      className={cx(
-                        carterOne.className,
-                        "block w-full py-4 md:py-6 px-8 rounded-xl  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs md:placeholder:text-xl placeholder:font-light"
-                      )}
-                    />
-                    <ErrorMessage
-                      name="lastName"
-                      component="div"
-                      className={cx(
-                        carterOne.className,
-                        "invisible error text-red-900 "
-                      )}
                     />
                   </div>
                   {/*industry  */}
