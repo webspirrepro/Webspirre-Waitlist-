@@ -21,7 +21,7 @@ function NavBar() {
   };
 
   return (
-    <div className="fixed top-0 w-full z-20 ">
+    <div className="fixe top-0 w-full z-20 ">
       <nav className=" items-center  ">
         <div className=" p-4  flex justify-between items-center sm:px-[50px] bg-[#F8F7F4] border-b border-[#BBBBBB]">
           <Link href="/">
