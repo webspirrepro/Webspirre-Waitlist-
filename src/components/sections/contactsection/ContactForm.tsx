@@ -167,7 +167,7 @@ const ContactForm: React.FC<ModalType> = ({
             />
             {/* Form Content */}
             <Form
-              className="p-2 md:pt-20 pb-24 md:pb-32 md:px-20 shadow-xl rounded-sm md:rounded-2xl space-y-10 md:space-y-20 w-full bg-white"
+              className="p-2 md:pt-20 pb-24 md:pb-32 md:px-20 shadow-xl rounded-t-sm md:rounded-t-2xl space-y-10 md:space-y-20 w-full bg-white"
               data-aos="fade-up"
             >
               <div className="flex flex-col md:flex-row space-y-3 md:space-x-24 w-full justify-center text-xs md:text-xl font-bold">
