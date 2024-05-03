@@ -128,11 +128,11 @@ const ContactForm: React.FC<ModalType> = ({
 
       localStorage.setItem("username", name as string);
       toogleModal();
-      resetForm();
+      // resetForm();
       // Reset form after 15 seconds
-      // setTimeout(() => {
-      //   resetForm();
-      // }, 10000);
+      setTimeout(() => {
+        resetForm();
+      }, 20000);
 
       // Handle errors
       if (error) {
@@ -159,8 +159,8 @@ const ContactForm: React.FC<ModalType> = ({
             {/* Modal */}
             <FormSuccessModal
               toogleModal={toogleModal}
-              // name={`${values.name} ${values.lastName}`}
-              name={username}
+              name={`${values.name}`}
+              //name={username} 
               open={open}
               resetForm={resetForm}
               videoToggle={videoToggle}
@@ -260,13 +260,11 @@ const ContactForm: React.FC<ModalType> = ({
                               ...provided,
                               border: "1px solid #ccc",
                               borderRadius: "12px",
+                              // added height dynamically
                               height:
                                 screenSize === "Small (SM)"
                                   ? "40px"
-                                  : screenSize === "Medium (MD)"
-                                  ? "40px"
                                   : "80px",
-
                               width: "100%", // Customize width as needed
                             }),
                             option: (provided, state) => ({
@@ -348,8 +346,7 @@ const ContactForm: React.FC<ModalType> = ({
                               border: "1px solid #ccc",
                               borderRadius: "12px",
                               height:
-                                screenSize === "Small (SM)" ||
-                                screenSize === "Medium (MD)"
+                                screenSize === "Small (SM)"
                                   ? "40px"
                                   : "80px",
                               width: "100%", // Customize width as needed
