@@ -38,7 +38,7 @@ const ContactSection: React.FC<ModalType> = ({
         }}
         className="justify-center w-full flex-row h- items-center space-y-4 pt-20"
       >
-        <section className="py-20 md:pt-20 w-full">
+        <section className="py-20 md:py-0 md:pt-20 w-full">
           <div className="text-center mx-auto max-w-[80%] md:max-w-5xl">
             <h1
               className={`${carterOne.className} text-xl md:text-6xl text-center `}
