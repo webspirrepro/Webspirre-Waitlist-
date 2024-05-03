@@ -31,7 +31,7 @@ const Section3 = () => {
             data-aos="fade-up-left"
           >
             <h1
-              className={`${carterOne.className} px-4 text-[20px sm:text-[30px] text-white`}
+              className={`${carterOne.className} px-4  text-xl md:text-[32px] text-white`}
             >
               A vast collection of some of the <br /> internet’s best{" "}
               <span
