@@ -1,4 +1,4 @@
-import React from "react";
+=import React from "react";
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
 import Select from "react-select";
@@ -260,11 +260,14 @@ const ContactForm: React.FC<ModalType> = ({
                               ...provided,
                               border: "1px solid #ccc",
                               borderRadius: "12px",
-                              // added height dynamically
-                              height:
-                                screenSize === "Small (SM)"
-                                  ? "40px"
-                                  : "80px",
+                                 height: "40px", // Default height for small devices
+                              // Media queries to adjust height based on screen size
+                              '@media (min-width: 768px)': {
+                                height: "80px", // Set height to 80px for medium and large devices
+                              },
+                              '@media (min-width: 992px)': {
+                                height: "80px", // Set height to 80px for large devices (adjust as needed)
+                              },
                               width: "100%", // Customize width as needed
                             }),
                             option: (provided, state) => ({
@@ -345,10 +348,14 @@ const ContactForm: React.FC<ModalType> = ({
                               ...provided,
                               border: "1px solid #ccc",
                               borderRadius: "12px",
-                              height:
-                                screenSize === "Small (SM)"
-                                  ? "40px"
-                                  : "80px",
+                              height: "40px", // Default height for small devices
+                              // Media queries to adjust height based on screen size
+                              '@media (min-width: 768px)': {
+                                height: "80px", // Set height to 80px for medium and large devices
+                              },
+                              '@media (min-width: 992px)': {
+                                height: "80px", // Set height to 80px for large devices (adjust as needed)
+                              },
                               width: "100%", // Customize width as needed
                             }),
                             option: (provided, state) => ({
