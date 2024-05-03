@@ -342,10 +342,6 @@ const ContactForm: React.FC<ModalType> = ({
                             (option) => option.value === field.value
                           )} // Set the value prop to the selected option
                           placeholder="Select Country..."
-                          className={cx(
-                            carterOne.className,
-                            "block w-full py-4 md:py-6 px-8 rounded-xl  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs md:placeholder:text-xl placeholder:font-light"
-                          )}
                           styles={{
                             control: (provided) => ({
                               ...provided,
