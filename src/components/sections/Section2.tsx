@@ -21,7 +21,7 @@ function Section2() {
 
   return (
     <div>
-      <section className="h-[779px] mt-[1d70px] px-40 xl:px-[200px]">
+      <section className="h-[779px] mt-[1d70px] px-5 xl:px-[200px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 items-center">
           <div className="col-span-4 flex-row" data-aos="fade-left">
             <h1
