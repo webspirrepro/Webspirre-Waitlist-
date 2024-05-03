@@ -398,67 +398,6 @@ const ContactForm: React.FC<ModalType> = ({
                       )}
                     />
                   </div>
-                  {/* <div
-                    className={
-                      (cx(carterOne.className), "flex flex-col space-y-3")
-                    }
-                  >
-                    <label htmlFor="specialization">Specialization:</label>
-                    <Field name="specialization">
-                      {({
-                        field,
-                      }: {
-                        field: {
-                          name: string;
-                          value: any;
-                          onChange: (e: any) => void;
-                          onBlur: () => void;
-                        };
-                      }) => (
-                        <Select
-                          {...field}
-                          key="specialization-select"
-                          onChange={(selectedOption) =>
-                            setFieldValue(
-                              "specialization",
-                              selectedOption?.value
-                            )
-                          }
-                          options={specializationOptions_}
-                          value={specializationOptions_.find(
-                            (option) => option.value === field.value
-                          )} // Set the value prop to the selected option
-                          placeholder="Select Specialization..."
-                          // className="h-10 md:h-16 border-2 border-gray-300 rounded-md w-full"
-                          styles={{
-                            control: (provided) => ({
-                              ...provided,
-                              border: "1px solid #ccc",
-                              borderRadius: "4px",
-                              height:
-                                screenSize === "Small (SM)" ||
-                                screenSize === "Medium (MD)"
-                                  ? "40px"
-                                  : "60px",
-                              width: "100%", // Customize width as needed
-                            }),
-                            option: (provided, state) => ({
-                              ...provided,
-                              backgroundColor: state.isSelected
-                                ? "#007bff"
-                                : "white", // Change background color of selected option
-                              color: state.isSelected ? "white" : "black", // Change text color of selected option
-                            }),
-                          }}
-                        />
-                      )}
-                    </Field>
-                    <ErrorMessage
-                      name="specialization"
-                      component="div"
-                      className={cx(carterOne.className, "error text-red-900")}
-                    />
-                  </div> */}
                 </div>
               </div>
               <div className="w-full text-center">
