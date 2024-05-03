@@ -42,7 +42,7 @@ function Section2() {
                 creative fire.{" "}
               </span>
             </h1>
-            <p className="text-sm xl:text-lg my-[32px]">
+            <p className="text-sm xl:text-lg my-6 md:my-[32px]">
               Tired of endlessly trawling through different websites searching
               for that perfect spark of inspiration for the project at hand? We
               get it. That's why we're building Webspirre.
