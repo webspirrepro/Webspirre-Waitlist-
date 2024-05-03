@@ -40,7 +40,7 @@ function Section4() {
             data-aos="fade-up-left"
           >
             {/* <div className="md:w-[568px]"> */}
-            <div className="w-full">
+            <div className="w-full pt-6 md:pt-0">
               <h1
                 className={`${carterOne.className} px-4 text-xl md:text-[32px] text-[#242B36]`}
               >
