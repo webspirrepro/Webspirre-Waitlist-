@@ -27,7 +27,7 @@ function Section5() {
       <section className="relative h-[900px] sm:h-[598px]">
         <div className="sm:relative h-[900px] sm:h-[598px] items-center bg-black grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 sm:gap-4 sm:pl-[200px]">
           <div
-            className="col-span-8 md:col-span-5 md:pr-[200px] relative z-10"
+            className="col-span-8 md:col-span-5 md:pr-[200px] relative z-10 pt-6 md:pt-0"
             data-aos="fade-up-right"
           >
             <h1
