@@ -21,7 +21,7 @@ function Section2() {
 
   return (
     <div>
-      <section className="h-[779px] mt-[1d70px] sm:px-40 xl:px-[200px]">
+      <section className="h-[779px] mt-[1d70px] px-40 xl:px-[200px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 items-center">
           <div className="col-span-4 flex-row" data-aos="fade-left">
             <h1
@@ -51,7 +51,7 @@ function Section2() {
             <div>
               <Link
                 href="/"
-                className="bg-black p-4 mb-[24px] px-8 text-white  rounded-[20px] font-medium text-[16px]"
+                className="bg-black px-4 py-2 sm:py-4 sm:px-8 text-white rounded-lg sm:rounded-[20px] border border-[#BBBBBB] font-medium text-[14px] sm:text-[18px]"
               >
                 Join the waitlist{" "}
               </Link>
