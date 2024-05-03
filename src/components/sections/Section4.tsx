@@ -65,7 +65,7 @@ function Section4() {
               <br />
               <Link
                 href="/"
-                className=" mx-4 bg-[#E4A12D] p-4 px-8 text-[#242B36] rounded-[20px] border border-[#242B36] font-medium text-[18px]"
+                className="bg-[#E4A12D] px-4 py-2 sm:py-4 sm:px-8 text-[#242B36] rounded-lg sm:rounded-[20px] border border-[#242B36] font-medium text-[14px] sm:text-[18px]"
               >
                 Join the waitlist{" "}
               </Link>
