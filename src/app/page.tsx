@@ -25,6 +25,7 @@ export default function Home() {
     setVModal((prev) => {
       const newState = !prev;
       setIsForm(false);
+      localStorage.removeItem("username");
       return newState;
     });
   };

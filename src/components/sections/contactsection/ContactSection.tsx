@@ -1,10 +1,15 @@
 import React from "react";
 import ContactForm from "./ContactForm";
-import { Carter_One } from "next/font/google";
+import { Carter_One, Poppins } from "next/font/google";
 import cx from "classnames";
 import { ModalType } from "@/types/types";
 const carterOne = Carter_One({
   weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -31,22 +36,22 @@ const ContactSection: React.FC<ModalType> = ({
           backgroundPosition: "center",
           position: "relative", // Position relative to allow absolute positioning of child elements
         }}
-        className="justify-center w-full flex-row h- items-center space-y-4 py-20"
+        className="justify-center w-full flex-row h- items-center space-y-4 pt-20"
       >
-        <section className="p-0 md:p-20 w-full">
-          <div className="text-center mx-auto max-w-full md:max-w-3xl">
+        <section className="py-20 md:pt-20 w-full">
+          <div className="text-center mx-auto max-w-[80%] md:max-w-5xl">
             <h1
-              className={`${carterOne.className} text-xl md:text-5xl text-center font-black leading-tight`}
+              className={`${carterOne.className} text-xl md:text-6xl text-center `}
             >
               <span
                 style={{
                   backgroundImage: `url(${backgroundImageUrl1})`,
                   backgroundSize: "contain",
-                  //   backgroundPosition: "center",
+                  backgroundPosition: "center",
                   position: "relative",
                   backgroundRepeat: "no-repeat",
                 }}
-                className="px-4"
+                className="px-4 md:px-8"
               >
                 Don't
               </span>{" "}
@@ -54,15 +59,15 @@ const ContactSection: React.FC<ModalType> = ({
             </h1>
             <p
               className={cx(
-                carterOne.className,
-                "text-xs md:text-xl mt-4 md:mt-8"
+                poppins.className,
+                "text-xs md:text-2xl font-medium md:font-bold mt-4 md:mt-8"
               )}
             >
                Enter your email address below to be among the first to access
               Webspirre and unlock a universe of web design inspiration.
             </p>
           </div>
-          <div className="mt-4 md:mt-10 mx-0 md:mx-auto w-full relative">
+          <div className="mt-4 md:mt-10 mx-0 md:mx-auto md:max-w-[70%] w-full relative hidden md:block">
             <ContactForm
               toogleModal={toogleModal}
               open={open}
@@ -70,6 +75,13 @@ const ContactSection: React.FC<ModalType> = ({
             />
           </div>
         </section>
+      </div>
+      <div className="mt-4 md:mt-10 mx-0 md:mx-auto md:max-w-[70%] w-full relative block md:hidden">
+        <ContactForm
+          toogleModal={toogleModal}
+          open={open}
+          videoToggle={videoToggle}
+        />
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
 import Select from "react-select";
 import { supabase } from "@/config/supabase";
-import { Carter_One } from "next/font/google";
+import { Poppins } from "next/font/google";
 import cx from "classnames";
 import { ModalType } from "@/types/types";
 import FormSuccessModal from "@/components/modals/FormSuccessModal";
@@ -39,8 +39,8 @@ interface FormData {
   industry: string;
 }
 
-const carterOne = Carter_One({
-  weight: ["400"],
+const carterOne = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -65,6 +65,7 @@ const ContactForm: React.FC<ModalType> = ({
   };
 
   const [screenSize, setScreenSize] = React.useState("");
+  const [username, setUsername] = React.useState("");
 
   React.useEffect(() => {
     // Function to update screen size
@@ -92,6 +93,7 @@ const ContactForm: React.FC<ModalType> = ({
 
     // Initial call to set screen size
     updateScreenSize();
+    setUsername(JSON.stringify(localStorage.getItem("username")));
 
     // Clean up event listener on unmount
     return () => {
@@ -124,11 +126,13 @@ const ContactForm: React.FC<ModalType> = ({
         ])
         .select();
 
+      localStorage.setItem("username", name as string);
       toogleModal();
+      resetForm();
       // Reset form after 15 seconds
-      setTimeout(() => {
-        resetForm();
-      }, 10000);
+      // setTimeout(() => {
+      //   resetForm();
+      // }, 10000);
 
       // Handle errors
       if (error) {
@@ -155,20 +159,26 @@ const ContactForm: React.FC<ModalType> = ({
             {/* Modal */}
             <FormSuccessModal
               toogleModal={toogleModal}
-              name={`${values.name} ${values.lastName}`}
+              // name={`${values.name} ${values.lastName}`}
+              name={username}
               open={open}
               resetForm={resetForm}
               videoToggle={videoToggle}
             />
             {/* Form Content */}
             <Form
-              className="p-2 md:p-20 shadow-xl roundd-sm md:rounded-xl space-y-10 md:space-y-20 w-full bg-white"
+              className="p-2 md:pt-20 pb-24 md:pb-32 md:px-20 shadow-xl rounded-sm md:rounded-2xl space-y-10 md:space-y-20 w-full bg-white"
               data-aos="fade-up"
             >
-              <div className="flex flex-col md:flex-row space-y-3 md:space-x-4 w-full justify-center text-xs md:text-xl font-thin">
-                <div className="flex-1 flex-col space-y-4 pt-4">
-                  <div className={cx(carterOne.className, "flex flex-col")}>
-                    <label htmlFor="name">First Name:</label>
+              <div className="flex flex-col md:flex-row space-y-3 md:space-x-24 w-full justify-center text-xs md:text-xl font-bold">
+                <div className="flex-1 flex-col space-y-8">
+                  <div
+                    className={cx(
+                      carterOne.className,
+                      "flex flex-col space-y-3"
+                    )}
+                  >
+                    <label htmlFor="name">First name</label>
                     <Field
                       type="text"
                       id="name"
@@ -176,7 +186,7 @@ const ContactForm: React.FC<ModalType> = ({
                       placeholder="Enter your firstName"
                       className={cx(
                         carterOne.className,
-                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500 placeholder:text-xs md:placeholder:text-xl"
+                        "block w-full py-4 md:py-6 px-4 rounded-xl  border border-gray-300 focus:outline-none focus:border-blue-500 placeholder:text-xs md:placeholder:text-xl placeholder:font-light"
                       )}
                     />
 
@@ -192,8 +202,13 @@ const ContactForm: React.FC<ModalType> = ({
                     {/* {screenSize} */}
                   </div>
 
-                  <div className={cx(carterOne.className, "flex flex-col")}>
-                    <label htmlFor="email">Email:</label>
+                  <div
+                    className={cx(
+                      carterOne.className,
+                      "flex flex-col space-y-3"
+                    )}
+                  >
+                    <label htmlFor="email">Email address</label>
                     <Field
                       type="email"
                       placeholder="example@gmail.com"
@@ -201,7 +216,7 @@ const ContactForm: React.FC<ModalType> = ({
                       name="email"
                       className={cx(
                         carterOne.className,
-                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs md:placeholder:text-xl"
+                        "block w-full py-4 md:py-6 px-4 rounded-xl  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs md:placeholder:text-xl placeholder:font-light"
                       )}
                     />
                     <ErrorMessage
@@ -211,8 +226,12 @@ const ContactForm: React.FC<ModalType> = ({
                     />
                   </div>
                   {/*industry  */}
-                  <div className={cx(carterOne.className)}>
-                    <label htmlFor="industry"> industry:</label>
+                  <div
+                    className={
+                      (cx(carterOne.className), "flex flex-col space-y-3")
+                    }
+                  >
+                    <label htmlFor="industry"> industry</label>
                     <Field name="industry">
                       {({
                         field,
@@ -240,12 +259,14 @@ const ContactForm: React.FC<ModalType> = ({
                             control: (provided) => ({
                               ...provided,
                               border: "1px solid #ccc",
-                              borderRadius: "4px",
+                              borderRadius: "12px",
                               height:
-                                screenSize === "Small (SM)" ||
-                                screenSize === "Medium (MD)"
+                                screenSize === "Small (SM)"
                                   ? "40px"
-                                  : "60px",
+                                  : screenSize === "Medium (MD)"
+                                  ? "40px"
+                                  : "80px",
+
                               width: "100%", // Customize width as needed
                             }),
                             option: (provided, state) => ({
@@ -266,9 +287,14 @@ const ContactForm: React.FC<ModalType> = ({
                     />
                   </div>
                 </div>
-                <div className="flex-1 flex-col space-y-4">
-                  <div className={cx(carterOne.className, "flex flex-col")}>
-                    <label htmlFor="lastName">lastName:</label>
+                <div className="flex-1 flex-col space-y-8">
+                  <div
+                    className={cx(
+                      carterOne.className,
+                      "flex flex-col space-y-3"
+                    )}
+                  >
+                    <label htmlFor="lastName">last name</label>
                     <Field
                       type="text"
                       id="lastName"
@@ -276,7 +302,7 @@ const ContactForm: React.FC<ModalType> = ({
                       placeholder="Enter your lastName"
                       className={cx(
                         carterOne.className,
-                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs md:placeholder:text-xl placeholder:font-thin"
+                        "block w-full py-4 md:py-6 px-8 rounded-xl  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs md:placeholder:text-xl placeholder:font-light"
                       )}
                     />
                     <ErrorMessage
@@ -288,8 +314,12 @@ const ContactForm: React.FC<ModalType> = ({
                       )}
                     />
                   </div>
-                  <div className={cx(carterOne.className)}>
-                    <label htmlFor="country">Country:</label>
+                  <div
+                    className={
+                      (cx(carterOne.className), "flex flex-col space-y-3")
+                    }
+                  >
+                    <label htmlFor="country">Country</label>
                     <Field name="country">
                       {({
                         field,
@@ -317,12 +347,12 @@ const ContactForm: React.FC<ModalType> = ({
                             control: (provided) => ({
                               ...provided,
                               border: "1px solid #ccc",
-                              borderRadius: "4px",
+                              borderRadius: "12px",
                               height:
                                 screenSize === "Small (SM)" ||
                                 screenSize === "Medium (MD)"
                                   ? "40px"
-                                  : "60px",
+                                  : "80px",
                               width: "100%", // Customize width as needed
                             }),
                             option: (provided, state) => ({
@@ -343,7 +373,37 @@ const ContactForm: React.FC<ModalType> = ({
                     />
                   </div>
                   {/*  */}
-                  <div className={cx(carterOne.className)}>
+                  <div
+                    className={cx(
+                      carterOne.className,
+                      "flex flex-col space-y-3"
+                    )}
+                  >
+                    <label htmlFor="Specialization">Specialization</label>
+                    <Field
+                      type="text"
+                      id="specialization"
+                      name="specialization"
+                      placeholder="Start typing i.e. Product Design.."
+                      className={cx(
+                        carterOne.className,
+                        "block w-full py-4 md:py-6 px-8 rounded-xl  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs md:placeholder:text-xl placeholder:font-light"
+                      )}
+                    />
+                    <ErrorMessage
+                      name="specialization"
+                      component="div"
+                      className={cx(
+                        carterOne.className,
+                        "invisible error text-red-900 "
+                      )}
+                    />
+                  </div>
+                  {/* <div
+                    className={
+                      (cx(carterOne.className), "flex flex-col space-y-3")
+                    }
+                  >
                     <label htmlFor="specialization">Specialization:</label>
                     <Field name="specialization">
                       {({
@@ -399,13 +459,13 @@ const ContactForm: React.FC<ModalType> = ({
                       component="div"
                       className={cx(carterOne.className, "error text-red-900")}
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="w-full text-center">
                 <button
                   type="submit"
-                  className="bg-black py-2 md:py-4 px-10 md:px-20 text-white rounded-[20px] border border-[#BBBBBB] font-medium text-xs md:text-[18px] disabled:bg-slate-600 disabled:cursor-not-allowed"
+                  className="bg-black py-4 md:py-6 px-auto w-full md:w-auto md:px-48 text-white rounded md:rounded-[20px] border border-[#BBBBBB] font-medium text-xs md:text-[18px] disabled:bg-slate-600 disabled:cursor-not-allowed"
                   disabled={
                     ![
                       values.country,
