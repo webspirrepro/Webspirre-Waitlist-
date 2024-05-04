@@ -31,9 +31,9 @@ const Section3 = () => {
             data-aos="fade-up-left"
           >
             <h1
-              className={`${carterOne.className} px-4 text-[20px sm:text-[30px] text-white`}
+              className={`${carterOne.className} px-4 pt-[50px] text-[20px] sm:text-[30px] text-white`}
             >
-              A vast collection of some of the <br /> internet’s best{" "}
+              A vast collection of some of the <br /> internet’s best{" "} <br className="sm:hidden"/>
               <span
                 style={{
                   backgroundImage: `url(${backgroundImageUrl1})`,

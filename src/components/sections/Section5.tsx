@@ -31,7 +31,7 @@ function Section5() {
             data-aos="fade-up-right"
           >
             <h1
-              className={`${carterOne.className} px-4 text-xl md:text-[32px] text-white`}
+              className={`${carterOne.className} pt-[50px] px-4 text-xl md:text-[32px] text-white`}
             >
               Stay ahead of the
               <span

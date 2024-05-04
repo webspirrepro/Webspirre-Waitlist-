@@ -434,7 +434,7 @@ const ContactForm: React.FC<ModalType> = ({
               <div className="w-full text-center">
                 <button
                   type="submit"
-                  className="bg-black py-4 md:py-6 px-auto w-full md:w-auto md:px-48 text-white rounded md:rounded-[20px] border border-[#BBBBBB] font-medium text-xs md:text-[18px] disabled:bg-slate-600 disabled:cursor-not-allowed"
+                  className="bg-black py-4 md:py-6 px-auto w-full md:w-auto md:px-48 text-white rounded-lg border border-[#BBBBBB] font-medium text-xs md:text-[18px] disabled:cursor-not-allowed"
                   disabled={
                     ![
                       values.country,

@@ -42,7 +42,7 @@ function Section4() {
             {/* <div className="md:w-[568px]"> */}
             <div className="w-full">
               <h1
-                className={`${carterOne.className} px-4 text-xl md:text-[32px] text-[#242B36]`}
+                className={`${carterOne.className} px-4 pt-[50px] text-xl md:text-[32px] text-[#242B36] leading-[40px] sm:leading-[55px]`}
               >
                 Powerful filtering tools to pinpoint <br /> exactly what you're{" "}
                 <span

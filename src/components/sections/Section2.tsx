@@ -21,7 +21,7 @@ function Section2() {
 
   return (
     <div>
-      <section className="h-[779px] mt-[1d70px] px-5 xl:px-[200px]">
+      <section className="h-[779px] sm:mt-[170px] px-5 xl:px-[200px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 items-center">
           <div className="col-span-4 flex-row" data-aos="fade-left">
             <h1
@@ -42,16 +42,16 @@ function Section2() {
                 creative fire.{" "}
               </span>
             </h1>
-            <p className="text-sm xl:text-lg my-[32px]">
+            <p className="text-sm xl:text-lg my-[30px]">
               Tired of endlessly trawling through different websites searching
               for that perfect spark of inspiration for the project at hand? We
               get it. That's why we're building Webspirre.
             </p>{" "}
             <br />
-            <div>
+            <div className="pb-[30px]">
               <Link
                 href="/"
-                className="bg-black px-4 py-2 sm:py-4 sm:px-8 text-white rounded-lg sm:rounded-[20px] border border-[#BBBBBB] font-medium text-[14px] sm:text-[18px]"
+                className="bg-black  px-4 py-2 sm:py-4 sm:px-8 text-white rounded-lg sm:rounded-[20px] border border-[#BBBBBB] font-medium text-[14px] sm:text-[18px]"
               >
                 Join the waitlist{" "}
               </Link>

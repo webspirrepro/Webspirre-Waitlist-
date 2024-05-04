@@ -26,7 +26,7 @@ const HeroSection: React.FC<HeroSectionType> = ({ bgImg, videoToggle }) => {
     });
   });
   return (
-    <div className="w-full">
+    <div className="w-full sm:800">
       <div
         style={{
           backgroundImage: `url(${bgImg})`,
@@ -34,7 +34,7 @@ const HeroSection: React.FC<HeroSectionType> = ({ bgImg, videoToggle }) => {
           backgroundPosition: "center",
           position: "relative", // Position relative to allow absolute positioning of child elements
         }}
-        className="justify-center w-full flex-row mt-[100px] h-screen items-center space-y-4 py-20"
+        className="justify-center w-full flex-row  items-center space-y-4 pt-[50px] px-4 sm:pt-[100px] mb-[50px] sm:mb-[150px]"
       >
         <article className="flex-flex-col w-full max-w-full space-y-6">
           <div
@@ -42,13 +42,14 @@ const HeroSection: React.FC<HeroSectionType> = ({ bgImg, videoToggle }) => {
             data-aos="zoom-in-up"
           >
             <h1
-              className={`${carterOne.className} text-[32px] sm:text-5xl text-center font-black `}
+              className={`${carterOne.className}  text-[32px] sm:text-5xl text-center font-black leading-[50px] sm:leading-[75px]`}
             >
+               
               <span
                 style={{
                   position: "relative",
                 }}
-                className="px-[10px] py-2"
+                className="px-[10px] py-2 "
               >
                 Finding
                 <img
@@ -77,7 +78,7 @@ const HeroSection: React.FC<HeroSectionType> = ({ bgImg, videoToggle }) => {
             </h1>
           </div>
 
-          <div className="flex items-center justify-center gap-4 pt-6">
+          <div className="flex items-center justify-center  gap-4 pt-[10] sm:pt-[16px] pd-[10px] sm:pb-[72px]">
             <Link
               href="#contact-section"
               className="bg-black px-4 py-2 sm:py-4 sm:px-8 text-white rounded-lg sm:rounded-[20px] border border-[#BBBBBB] font-medium text-[14px] sm:text-[18px]"
@@ -93,15 +94,25 @@ const HeroSection: React.FC<HeroSectionType> = ({ bgImg, videoToggle }) => {
             </div>
           </div>
           {/*@todo still working here */}
-          <Image
-            height={20}
-            width={1030}
-            src="https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714127396/utilities/Group_40_fkagjj.svg"
-            alt="rice"
-            className="w-full backdrop-brightness-75 relative"
-            style={{ filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))" }}
-            data-aos="zoom-in-right"
-          />
+
+          <div className="relative ">
+            <Image
+              height={20}
+              width={1030}
+              src="https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714127396/utilities/Group_40_fkagjj.svg"
+              alt="rice"
+              className="w-full relative"
+              style={{
+                filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                zIndex: 1,
+              }}
+              data-aos="zoom-in-right"
+            />
+            <div
+              className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"
+              style={{ zIndex: 2 }}
+            />
+          </div>
         </article>
       </div>
       <div></div>
