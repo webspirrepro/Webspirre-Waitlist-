@@ -58,7 +58,7 @@ function Section2() {
             </div>
           </div>
           <div
-            className="col-span-4 justify-center items-center flex"
+            className="col-span-4 justify-center items-center flex mt-8 md:mt-0"
             data-aos="fade-right"
           >
             {" "}

@@ -27,7 +27,7 @@ const Section3 = () => {
       <section className="relative h-[900px] sm:h-[598px]">
         <div className="sm:relative h-[900px] sm:h-[598px] items-center bg-black grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 sm:gap-4 sm:pl-[200px]">
           <div
-            className="col-span-5  sm:pr-[200px] relative z-10"
+            className="col-span-5  sm:pr-[200px] relative z-10  pt-6 md:pt-0"
             data-aos="fade-up-left"
           >
             <h1
@@ -55,7 +55,7 @@ const Section3 = () => {
             <br />
             <Link
               href="/"
-              className=" bg-black p-4 mx-4 px-8 text-[#E4A12D] rounded-[20px] border border-[#E4A12D] font-medium text-[18px]"
+              className="bg-black p-4 mx-4 px-8 text-[#E4A12D] rounded-[20px] border border-[#E4A12D] font-medium text-[18pxbg-black px-4 py-2 sm:py-4 sm:px-8 text-[#E4A12D] rounded-lg sm:rounded-[20px] border border-[#E4A12D] font-medium text-[14px] sm:text-[18px]"
             >
               Join the waitlist{" "}
             </Link>

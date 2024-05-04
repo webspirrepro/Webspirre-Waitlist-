@@ -40,7 +40,7 @@ function Section4() {
             data-aos="fade-up-left"
           >
             {/* <div className="md:w-[568px]"> */}
-            <div className="w-full">
+            <div className="w-full pt-6 md:pt-0">
               <h1
                 className={`${carterOne.className} px-4 pt-[50px] text-xl md:text-[32px] text-[#242B36] leading-[40px] sm:leading-[55px]`}
               >
@@ -65,7 +65,7 @@ function Section4() {
               <br />
               <Link
                 href="/"
-                className=" mx-4 bg-[#E4A12D] p-4 px-8 text-[#242B36] rounded-[20px] border border-[#242B36] font-medium text-[18px]"
+                className="mx-4 bg-[#E4A12D] px-4 py-2 sm:py-4 sm:px-8 text-[#242B36] rounded-lg sm:rounded-[20px] border border-[#242B36] font-medium text-[14px] sm:text-[18px]"
               >
                 Join the waitlist{" "}
               </Link>
